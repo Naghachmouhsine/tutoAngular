@@ -1,0 +1,35 @@
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="detailsModalLabel">Détails Post</h5>
+      <button type="button" class="btn-close" (click)="closeDialog()"></button>
+    </div>
+    <div class="modal-body">
+      <!-- <form (submit)="onSubmit()" #postForm="ngForm"> -->
+        <div class="form-group">
+          <label for="name">user</label>
+          <select class="form-control" id="userId" required   [(ngModel)]="post.userId" name="userId" >
+            <option *ngFor="let user of users"  [selected]="post.userId===user" [value]="user">{{user}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="title">title</label>
+          <input type="text" class="form-control" required [(ngModel)]="post.title" name="title">
+        </div>
+
+        <div class="form-group">
+          <label for="body">body</label>
+          <textarea type="text" class="form-control" id="body" required [(ngModel)]="post.body" name="body"></textarea>
+
+        </div>
+
+
+
+      <!-- </form> -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-success me-2" (click)="onSubmit()" >Save</button>
+      <button class="btn btn-secondary me-2" (click)="closeDialog()" >Fermer</button>
+    </div>
+  </div>

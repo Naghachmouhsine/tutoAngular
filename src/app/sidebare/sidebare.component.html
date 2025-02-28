@@ -1,0 +1,45 @@
+<div class="sidebar" [ngClass]="{'open' : isSidebarOpen}" >
+  <div class="logo-details">
+    <!-- <i class="bx bxl-c-plus-plus icon"></i> -->
+    <div class="logo_name">B-AGILE</div>
+    <i class="bx bx-menu"  [ngClass]="{'bx-menu-alt-right': isSidebarOpen}" id="btn" (click)="toggleSidebar()"></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+      <i class="bx bx-search" (click)="toggleSidebar()"></i>
+      <input type="text" placeholder="Search..." />
+      <span class="tooltip">Search</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-grid-alt"></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+      <a [routerLink]="['/posts']"   >
+        <i class="bi bi-plus"></i>
+        <span class="links_name">Post</span>
+      </a>
+      <span class="tooltip">Post</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-cog"></i>
+        <span class="links_name">Setting</span>
+      </a>
+      <span class="tooltip">Setting</span>
+    </li>
+    <li class="profile">
+      <div class="profile-details">
+        <img src="https://cdn-icons-png.flaticon.com/256/9706/9706583.png" alt="profileImg" />
+        <div class="name_job">
+          <div class="name">Naghach Mouhsine</div>
+          <div class="job">Web developer</div>
+        </div>
+      </div>
+      <i class="bx bx-log-out" id="log_out"></i>
+    </li>
+  </ul>
+</div>

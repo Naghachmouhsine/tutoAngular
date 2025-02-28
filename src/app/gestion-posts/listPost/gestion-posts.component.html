@@ -1,0 +1,28 @@
+<!-- <div class="container mt-4"> -->
+<div class="mb-3">
+  <button class="btn btn-primary" (click)="add()"><i class="bi bi-plus-circle-fill me-2 "></i> Ajouter</button>
+</div>
+
+<input type="text" placeholder="searsh" class="form-control mb-3" [(ngModel)]="titleSh" (input)="searsh(titleSh)" name="search">
+<div class="d-flex  justify-content-center ">
+
+</div>
+<ul class="list-group">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center mb-3 shadow-lg p-3 mb-5 bg-white rounded  "
+    *ngFor="let post of postsFiltrs">
+    id : {{post.id}}, title : {{post.title}}
+    <div>
+      <button class="btn btn-sm me-2" (click)="update(post)"><i class="bi bi-pencil-square"
+          style="color: rgb(12, 236, 42);"></i></button>
+      <button class="btn btn-sm" (click)="delete(post)"><i class="bi bi-trash-fill" style="color: red;"></i></button>
+      <button class="btn  btn-sm" (click)="detail(post)"><i class="bi bi-eye-fill"
+          style="color: rgb(0, 174, 255);"></i></button>
+    </div>
+  </li>
+  @if (postsFiltrs.length==0) {
+  <div class="">
+    aucun post avec ce titile
+  </div>
+  }
+</ul>

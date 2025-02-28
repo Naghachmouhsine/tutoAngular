@@ -1,0 +1,19 @@
+
+.mat-paginator {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.mat-paginator .mat-button {
+  color: #6200ea;
+  font-weight: bold;
+}
+
+.mat-paginator .mat-paginator-navigation-previous {
+  color: #ff5722;
+}
+
+.mat-paginator .mat-paginator-navigation-next {
+  color: #00bcd4;
+}

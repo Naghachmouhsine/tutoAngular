@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AppTuto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.12.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# tutoAngular
+>>>>>>> 1b2201af6b9d72a63c85233ed5d8e2e8229b3781
